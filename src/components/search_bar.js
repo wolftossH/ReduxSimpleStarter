@@ -18,23 +18,36 @@ class SearchBar extends Component {
         // term short for search term
         this.state = {term: ''};
     }
-    render() {
-        // event handler
-        // return <input onChange={this.onInputChange}/>;
-        // cleaning up code
-        // return <input onChange={(event) =>console.log(event.target.value)} />;
-        return (
-            <div>
-        <input onChange={
-            // have to use .setState()
-            (event) => this.setState({term: event.target.value})
-        } />;
-        {/* Value of the input: {this.state.term} */}
-        </div>
-        )
+    // render() {
+    //     // event handler
+    //     // return <input onChange={this.onInputChange}/>;
+    //     // cleaning up code
+    //     // return <input onChange={(event) =>console.log(event.target.value)} />;
+    //     return (
+    //         <div className="search-bar">
+    //     <input onChange={
+    //         // have to use .setState()
+    //         (event) => this.setState({term: event.target.value})
+    //     } />;
+    //     {/* Value of the input: {this.state.term} */}
+    //     </div>
+    //     )
     
-    }
+    // }
 
+    render() {
+        return (
+          <div className='search-bar'>
+            <input
+            value = {this.state.term}
+            onChange={event=>this.onInputChange(event.target.value)}
+            />
+          </div>
+        )
+      }
+    onInputChange(term) {
+
+    }
     // can name anything in fucntion parameter with event object
     // onInputChange(event) {
     //     console.log(event.target.value);
