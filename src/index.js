@@ -70,22 +70,6 @@ ReactDOM.render(<App />, document.querySelector('.container'));
 // }
 
 
-// render() {
-//   const videoSearch = _.debounce(
-//     (term) => {this.videoSearch(term)},300
-//     );
-//   return (
-//     <div>
-//       <SearchBar onSearchTermChange={videoSearch} />
-//       <VideoDetail video={this.state.selectedVideo}/>
-//       <VideoList
-//       onVideoSelect={selectedVideo=>this.setState({selectedVideo})}
-//       videos={this.state.videos}/>
-//     </div>
-//   )
-
-// }
-
 // const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 // ReactDOM.render(
